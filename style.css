@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans:wght@400;500;700;800&display=swap");
+:root {
+	--text-dark: #303030;
+	--text-light-grey: #717171;
+	--indigo-blue: #004b6b;
+	--secondary-section: #e4f1fa;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body,
+html {
+	overflow-x: hidden;
+}
+body {
+	line-height: 1.6;
+	font-family: "Open Sans", sans-serif;
+	font-size: 0.875rem;
+	color: var(--text-dark);
+	text-align: center;
+}
+h2 {
+	font-size: 2rem;
+	line-height: 1;
+	text-align: center;
+}
+h1 {
+	font-weight: 800;
+	line-height: 1;
+	font-size: 2.5rem;
+}
+img {
+	width: 100%;
+	display: block;
+}
+.m-2 {
+	padding: 2em;
+}
+.secondary-text {
+	color: var(--text-light-grey);
+}
+
+.border {
+	border: 1px solid #e2e2e2;
+}
+.container {
+	width: 90%;
+	margin: auto;
+}
+.narrow-width {
+	width: 60%;
+	margin: auto;
+}
+.mb-32 {
+	margin-bottom: 48px;
+}
+.mt-32 {
+	margin-top: 48px;
+}
+.mt-16 {
+	margin-top: 16px;
+}
+.mb-16 {
+	margin-bottom: 16px;
+}
+.bold {
+	font-weight: 700;
+}
+.grid-col-2,
+.grid-col-3 {
+	display: grid;
+	gap: 2em;
+}
+.grid-item-2,
+.grid-item-3 {
+	display: flex;
+	align-items: center;
+}
+.section-main {
+	padding: 6em 0;
+}
+.section-box {
+	box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+		rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+	background-color: #fff;
+}
+.service-img {
+	width: 20px;
+	height: 200px;
+	border-radius: 100%;
+}
+.section-secondary {
+	background-color: var(--secondary-section);
+}
+.curved {
+	border-radius: 10px;
+}
+.icon-values {
+	width: 100px;
+	display: inline;
+}
+.section-cta {
+	background-image: url("/assets/background-banner.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.left {
+	text-align: left;
+}
+.about-us-images {
+	max-width: 350px;
+}
+.dark-links {
+	color: var(--text-light-grey);
+}
+.light-links {
+	color: #fff;
+}
+.default-links {
+	text-decoration: none;
+	padding: 0px 10px 0px 10px;
+}
+.primary-navigation,
+header {
+	background: #fff;
+	width: 100%;
+}
+header {
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	height: 5em;
+}
+.nav-bg-solid {
+	box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+}
+.nav-toggle {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+}
+.nav-toggle:focus ~ .nav-toggle-label {
+	outline: solid 3px;
+}
+.nav-toggle-label {
+	height: 100%;
+	display: flex;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 5%;
+	align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+	display: block;
+	background: var(--text-dark);
+	height: 3px;
+	width: 1.2em;
+	border-radius: 2px;
+	position: relative;
+}
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+	content: "";
+	position: absolute;
+}
+.nav-toggle-label span::before {
+	bottom: 7px;
+}
+.nav-toggle-label span::after {
+	top: 7px;
+}
+.primary-navigation {
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 0.4s ease-in-out;
+}
+.primary-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.primary-navigation li {
+	padding: 1em 0 1em 5%;
+	border-top: 0.5px solid var(--indigo-blue);
+}
+.primary-navigation li:last-child {
+	border-bottom: 0.5px solid var(--indigo-blue);
+}
+.nav-toggle:checked ~ .primary-navigation {
+	transform: scale(1, 1);
+}
+.nav-toggle:checked ~ .primary-navigation a {
+	opacity: 1;
+	transition: opacity 250ms ease-in-out 250ms;
+}
+.company-logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 5%;
+	align-items: center;
+	height: 70px;
+	width: 70px;
+}
+.company-logo > img {
+	cursor: pointer;
+	border-radius: 100px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+.primary-nav-link {
+	display: inline-block;
+	padding: 13px 10px 13px 10px;
+}
+/* landing styles */
+.home-message {
+	display: grid;
+	gap: 1.5em;
+	padding: 9em 0 6em 0;
+	text-align: left;
+}
+.section-landing {
+	padding: 6em 0 6em 0;
+}
+.p-span {
+	display: block;
+	font-weight: 500;
+	font-size: 1.5em;
+	color: var(--text-light-grey);
+}
+.default-button {
+	font-size: 1.15rem;
+	border: none;
+	cursor: pointer;
+	text-decoration: none;
+	text-transform: capitalize;
+	display: inline-block;
+	border-radius: 9999px;
+}
+.home-button-contact {
+	padding: 0.75em 2em;
+	color: #fff;
+	border-radius: 9999px;
+	background-color: var(--indigo-blue);
+}
+@media (min-width: 50em) {
+	.home-message {
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+		align-items: center;
+		height: calc(100vh);
+		padding: 0;
+	}
+	.main-heading {
+		font-weight: 800;
+		font-size: 3rem;
+		margin-bottom: 32px;
+		color: var(--indigo-blue);
+	}
+	.grid-col-2 {
+		grid-template-columns: 1fr 1fr;
+	}
+	.grid-col-3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	/* nav styles */
+	.nav-toggle-label {
+		display: none;
+	}
+	.primary-navigation ul {
+		display: flex;
+	}
+	header {
+		display: grid;
+		grid-template-columns: 5% 1fr 1fr 5%;
+	}
+	.company-logo {
+		all: unset;
+		display: flex;
+		grid-column: 2/3;
+		justify-content: flex-start;
+		align-items: center;
+		padding-left: 0;
+		height: 90px;
+		width: 90px;
+	}
+	.primary-navigation {
+		all: unset;
+		grid-column: 3/4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.primary-navigation li {
+		padding: 0 0 0 2em;
+		border: none;
+	}
+	.primary-navigation li:last-child {
+		border-bottom: none;
+	}
+	.primary-navigation a {
+		opacity: 1;
+		position: relative;
+	}
+}
+@media (min-width: 45em) {
+	body {
+		font-size: 1.125rem;
+	}
+	h2 {
+		font-size: 3rem;
+	}
+	h1 {
+		font-size: 3.5rem;
+	}
+	.mb-32 {
+		margin-bottom: 64px;
+	}
+	.mt-32 {
+		margin-top: 64px;
+	}
+}
+/* footer styles */
+footer {
+	background-color: var(--text-dark);
+	color: #fff;
+	text-align: center;
+}
+.footer-top {
+	padding: 6em 0;
+}
+.footer-brand {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 32px 0;
+	border-top: 0.5px solid #fff;
+}
+.footer-brand > nav > ul > li {
+	display: inline-block;
+}
+.footer-brand > nav {
+	text-align: left;
+}
+.light-links {
+	color: #fff;
+	text-decoration: none;
+}
+.footer-branding {
+	font-family: "Courgette", cursive;
+}
+.footer-links-ul > li {
+	margin-right: 16px;
+	display: inline-block;
+}
+.social-media-icon {
+	width: 30px;
+}
+
+.privacy-policy {
+	text-align: center;
+	padding: 0.5em;
+}

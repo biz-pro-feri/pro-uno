@@ -1,0 +1,15 @@
+{
+  "name": "pro-uno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/biz-pro-feri/pro-uno",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}
